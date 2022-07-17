@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import {addUser } from 'Redux/userSlice';
+import { addUser } from 'Redux/userSlice';
+import {Button} from '../Contacts/contacts.styled';
+import {FormStyled} from './form.styled';
 
 //==========================================================
 function Form(){
@@ -22,7 +24,7 @@ function Form(){
       !userSelector.find(
         user =>
           user.name.toLowerCase() === newContact.name.toLowerCase())) {
-      dispatch(addUser(newContact)
+      dispatch(addUser(newContact),
       );
     } else {
       alert(`${newContact.name} is already in contacts`);
@@ -52,15 +54,15 @@ function Form(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const name=e.currentTarget.elements.name.value
-    const number=e.currentTarget.elements.number.value
+    const name = e.currentTarget.elements.name.value;
+    const number = e.currentTarget.elements.number.value;
     formSubmitHandler(name, number);
     reset();
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <FormStyled onSubmit={handleSubmit}>
         <label>
           Name
           <input type='text'
@@ -84,8 +86,8 @@ function Form(){
                  value={number}
           />
         </label>
-        <button type='submit'>Add contact</button>
-      </form>
+        <Button type='submit' >Add contact</Button>
+      </FormStyled>
 
     </>
 

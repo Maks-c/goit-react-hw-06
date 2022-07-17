@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactListItem from '../ContactListItem';
+import ContactListItem from './contactListItem';
 
-import { List } from './ContactsStyle';
+import { List } from './contacts.styled';
 import { useSelector } from 'react-redux';
 
 

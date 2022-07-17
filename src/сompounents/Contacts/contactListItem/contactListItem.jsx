@@ -1,9 +1,10 @@
 import React from 'react';
 
 //==============================================
-import { SpanItem } from './ContactsListItemStyle';
+import { SpanItem } from './contactsListItem.styled';
 import { useDispatch } from 'react-redux';
-import { removeUser } from '../../Redux/userSlice';
+import { removeUser } from '../../../Redux/userSlice';
+import {Button} from '../contacts.styled';
 
 const ContactListItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const ContactListItem = ({ id, name, number }) => {
       <li key={id}>
         <SpanItem>{name}</SpanItem>
         <SpanItem>{number}</SpanItem>
-        <button type='button' id={id} onClick={deleteContact} >Delete</button>
+        <Button type='button' id={id} onClick={deleteContact} >Delete</Button>
       </li>
 
     </>

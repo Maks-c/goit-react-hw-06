@@ -30,5 +30,3 @@ const persistConfig = {
 export const persistedUserReducer = persistReducer(persistConfig, userSlice.reducer);
 //=======================================================================
 export const { addUser, removeUser, addFilter } = userSlice.actions;
-// export const getUser = state => state.items;
-// export const getFilter = state => state.filter;
