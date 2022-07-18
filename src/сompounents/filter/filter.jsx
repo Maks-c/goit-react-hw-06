@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FilterDiv } from './filter.styled';
-import { addFilter} from '../../Redux/userSlice';
+import { addFilter} from '../../redux/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Filter = () => {

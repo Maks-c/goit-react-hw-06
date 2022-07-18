@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser } from 'Redux/userSlice';
+import { addUser } from 'src/redux/userSlice';
 import {Button} from '../Contacts/contacts.styled';
 import {FormStyled} from './form.styled';
 
 
-//==========================================================
 function Form(){
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');

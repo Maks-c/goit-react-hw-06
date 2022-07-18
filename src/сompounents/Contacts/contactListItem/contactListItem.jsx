@@ -1,9 +1,9 @@
 import React from 'react';
 
-//==============================================
+
 import { SpanItem } from './contactsListItem.styled';
 import { useDispatch } from 'react-redux';
-import { removeUser } from '../../../Redux/userSlice';
+import { removeUser } from '../../../redux/userSlice';
 import {Button} from '../contacts.styled';
 
 const ContactListItem = ({ id, name, number }) => {
