@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filter);
+  const stateFilter = useSelector(state => state.filter);
   const getFilters = e => {
     dispatch(addFilter(e.target.value));
   };
@@ -16,7 +16,7 @@ const Filter = () => {
       <input type='text'
              name='filter'
              onChange={getFilters}
-             value={filter} // значение = вводимые символы в инпуте
+             value={stateFilter} // значение = вводимые символы в инпуте
       />
     </FilterDiv>
   );

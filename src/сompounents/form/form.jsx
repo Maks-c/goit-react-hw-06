@@ -5,6 +5,7 @@ import { addUser } from 'Redux/userSlice';
 import {Button} from '../Contacts/contacts.styled';
 import {FormStyled} from './form.styled';
 
+
 //==========================================================
 function Form(){
   const [name, setName] = useState('');
@@ -35,16 +36,7 @@ function Form(){
 
   const handleChange = e => {
     const { name, value } = e.target;
-    switch (name){
-      case 'name':
-        setName(value);
-        break;
-      case 'number':
-        setNumber(value);
-        break;
-      default:
-        return;
-    }
+    name === "name" ? setName(value) : setNumber(value)
   };
 
   const reset = () => {
@@ -61,7 +53,6 @@ function Form(){
   };
 
   return (
-    <>
       <FormStyled onSubmit={handleSubmit}>
         <label>
           Name
@@ -88,8 +79,6 @@ function Form(){
         </label>
         <Button type='submit' >Add contact</Button>
       </FormStyled>
-
-    </>
 
   );
 

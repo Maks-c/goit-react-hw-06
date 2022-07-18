@@ -15,14 +15,11 @@ const ContactListItem = ({ id, name, number }) => {
     dispatch(removeUser((deleteContact)));
   };
   return (
-    <>
       <li key={id}>
         <SpanItem>{name}</SpanItem>
         <SpanItem>{number}</SpanItem>
         <Button type='button' id={id} onClick={deleteContact} >Delete</Button>
       </li>
-
-    </>
   );
 };
 
