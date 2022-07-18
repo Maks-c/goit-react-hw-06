@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser } from 'src/redux/userSlice';
+import { addUser } from '../../redux/userSlice';
 import {Button} from '../Contacts/contacts.styled';
 import {FormStyled} from './form.styled';
 

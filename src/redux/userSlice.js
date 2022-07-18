@@ -8,7 +8,7 @@ export const userSlice = createSlice({
     items: [],
     filter: '',
   },
-  //=============================
+
   reducers: {
     addUser: (state, action) => {
       state.items.push(action.payload);
@@ -28,5 +28,5 @@ const persistConfig = {
   whitelist:['items']
 };
 export const persistedUserReducer = persistReducer(persistConfig, userSlice.reducer);
-//=======================================================================
+
 export const { addUser, removeUser, addFilter } = userSlice.actions;
